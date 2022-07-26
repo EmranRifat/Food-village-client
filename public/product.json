@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Breakfast items ",
+        "price": "150 $",
+        "supplier": "Micle paule",
+        "quantity": "120",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem  ",
+        "img": "https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Italian-Breakfast-Foods-1024x536.png"
+        
+    },
+    {
+        "id": 2,
+        "name": "Lunch items",
+        "price": "180 $",
+        "supplier": "Micle paule",
+        "quantity": "10",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem. ",
+        "img": "https://images.food52.com/McqpjxUiMekhfX6Rsq7wuuSoz0g=/2016x1344/filters:htmlFormat(webp)/d815e816-4664-472e-990b-d880be41499f--chicken-biryani-recipe.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Dinner items ",
+        "price": "100 $",
+        "supplier": "Micle paule",
+        "quantity": "12",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem ",
+        "img": "https://efoodsdirect.co.uk/wp-content/uploads/2021/09/rui_11zon1.jpg"
+    },
+    {
+        "id":4,
+        "name": "Fastfood",
+        "price": "80 $",
+        "supplier": "Micle paule",
+        "quantity": "1",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae.",
+        "img": "https://assets.bonappetit.com/photos/6018560126af00c353671c6e/master/pass/Lunch-Nachos-With-Spiced-Cauliflower.jpg"
+    },
+    {
+        "id":5,
+        "name": "Fastfood",
+        "price": "80 $",
+        "supplier": "Micle paule",
+        "quantity": "1",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae.",
+        "img": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=htmlFormat&fit=crop&w=465&q=80"
+    },
+    {
+        "id":4,
+        "name": "Drinks",
+        "price": "80 $",
+        "supplier": "Micle paule",
+        "quantity": "1",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae.",
+        "img": "https://images.unsplash.com/photo-1497534446932-c925b458314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=htmlFormat&fit=crop&w=472&q=80"
+    }
+    
+]

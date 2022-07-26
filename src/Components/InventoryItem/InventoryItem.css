@@ -1,0 +1,11 @@
+.items{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px; 
+    marginLeft: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.supplier{
+    line-height:.2;
+}

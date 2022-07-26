@@ -1,0 +1,20 @@
+.chefs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px; 
+    /* marginLeft: 10px;
+    margin-top: 20px; */
+    /* justify-content: center; */
+}  
+@media only screen and (max-width:576px) {
+
+    .chefs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px; 
+        marginLeft: 10px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+}
