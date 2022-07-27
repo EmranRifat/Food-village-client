@@ -32,6 +32,7 @@ import React from 'react';
 import Error from './Components/Error/Error';
 import RequireAdmin from './Shared/Login/RequireAdmin';
 import CardDetails from './Components/CardDetails/CardDetails';
+import Kitchen from './Components/Dashboard/Kitchen';
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
         <Route path='orderlist' element={<OrderList></OrderList>}/>
         <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}/>
         <Route path='myorders' element={<MyOrders></MyOrders>}/>
+        <Route path='kitchen' element={<Kitchen></Kitchen>}/>
       </Route>
 
 

@@ -32,9 +32,9 @@ const Login = () => {
   if (loading || gLoading) {
     return <Loading></Loading>;
   }
-  // if(user||gUser){
-  //     navigate('/')
-  // }
+  if(user||gUser){
+      navigate('/')
+  }
   if (token) {
     navigate(from, { replace: true });
     // console.log("token from login",token);

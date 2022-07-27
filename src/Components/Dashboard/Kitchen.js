@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-// import { toast } from "react-toastify";
-// import { Link, useParams } from "react-router-dom";
-const OrderList = () => {
+
+const Kitchen = () => {
   const [user] = useAuthState(auth);
 
   // const { userId } = useParams();
@@ -21,15 +20,15 @@ const OrderList = () => {
       },
       body: JSON.stringify({ id: id, status: status }),
     }).then((res) => {
-      statusFetchHendallers("pending");
+      statusFetchHendallers("approved");
     });
   };
 
   useEffect(() => {
-    statusFetchHendallers("pending");
+    statusFetchHendallers("approved");
   }, []);
   const statusFetchHendallers = (status) => {
-    if (status === "pending") {
+    if (status === "approved") {
       setPending(true);
     } else {
       setPending(false);
@@ -52,30 +51,18 @@ const OrderList = () => {
       </h2>
 
       <div className="text-center">
-        <button
-          onClick={() => statusFetchHendallers("pending")}
-          className="btn btn-primary text-white btn-sm"
-        >
-          Pending
-        </button>
 
         <button
           onClick={() => statusFetchHendallers("approved")}
           className="btn btn-success  mx-2 text-white btn-sm"
         >
+      
           Accepted
         </button>
 
         <button
-          onClick={() => statusFetchHendallers("reject")}
-          className="btn bg-danger border-0 text-white  btn-sm px-4 "
-        >
-          Reject
-        </button>
-
-        <button
           onClick={() => statusFetchHendallers("delivered")}
-          className="btn bg-info border-0 text-white mx-2 btn-sm px-4 "
+          className="btn bg-info border-0 text-white  btn-sm px-4 "
         >
           Delivered
         </button>
@@ -115,16 +102,10 @@ const OrderList = () => {
                 {pending && (
                   <td>
                     <button
-                      onClick={() => acceptFood(f._id, "approved")}
+                      onClick={() => acceptFood(f._id, "delivered")}
                       className="btn  btn-accent px-4 btn-xs"
                     >
-                      Accept
-                    </button>
-                    <button
-                      onClick={() => acceptFood(f._id, "reject")}
-                      className="btn btn-danger mx-2 px-4 btn-xs"
-                    >
-                      Reject
+                      Deliver
                     </button>
                   </td>
                 )}
@@ -137,4 +118,4 @@ const OrderList = () => {
   );
 };
 
-export default OrderList;
+export default Kitchen;

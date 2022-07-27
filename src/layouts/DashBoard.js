@@ -10,6 +10,7 @@ function DashBoard() {
     const [user] = useAuthState(auth);
     const [admin]=useAdmin(user); 
     const [chef]=useChef(user);
+    // console.log(chef);
     // console.log(admin); 
     return (
         <div>
@@ -32,11 +33,17 @@ function DashBoard() {
                 <li><Link to={'/dashboard'}><i className="fa-solid fa-cart-arrow-down"></i> Food List</Link></li>
                 <li><Link to={'/dashboard/myorders'}><i className="fa-solid fa-house"><i className="fa-solid fa-cart-xmark"></i> </i> My Orders</Link></li>
                 <li><Link to={'/dashboard/review'}><i className="fa-solid fa-user"></i>  Reviews</Link></li>
-              
-               {admin &&<li><Link to={'/dashboard/orderlist'}><i className="fa-solid fa-table-list"></i> Order List</Link></li>}
-                   {admin && <li><Link to={'/dashboard/addfood'}> <i className="fa-solid fa-utensils"></i>Add Food</Link></li>}
-                  { admin && <li><Link to={'/dashboard/allusers'}><i className="fa-solid fa-bell"></i>All Users</Link></li>
-             }
+                    
+               {admin  && <>
+                <li><Link to={'/dashboard/orderlist'}><i className="fa-solid fa-table-list"></i> Order List</Link></li>
+                <li><Link to={'/dashboard/addfood'}> <i className="fa-solid fa-utensils"></i>Add Food</Link></li>
+                <li><Link to={'/dashboard/allusers'}><i className="fa-solid fa-bell"></i>All Users</Link></li>
+                <li><Link to={'/dashboard/kitchen'}><i className="fa-solid fa-mug-hot"></i>Kitchen</Link></li>
+                </>}
+                {
+                    chef&&<li><Link to={'/dashboard/kitchen'}><i className="fa-solid fa-mug-hot"></i>Kitchen</Link></li>
+                }
+             
                 
                 {
                 /* <li><Link to={'/dashboard/users'}>All Users</Link></li>

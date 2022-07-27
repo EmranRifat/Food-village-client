@@ -20,7 +20,7 @@ const useChef=user=>{
         .then(res=>res.json())
         .then(data => {
             console.log(data);
-            setChef(data.admin);
+            setChef(data.chef);
             setChefLoading(false);
             // setAdminLoading(false);
         })

@@ -5,22 +5,22 @@ import { toast } from "react-toastify";
 const UserRow = ({ index, user, refetch, setDeletingUser }) => {
   const { email, _id, role } = user;
 
-const makeChef=()=>{
-  fetch(`http://localhost:5000/users/chef/${email}`,{
-    method:"PUT",
-    headers:{ authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-    }
-  })
-  .then(res=>res.json())
-  .then(data=>{
-    // console.log(data);
-    if(data.modifiedCount>0){
-      refetch();
-      toast.success(`Successfully made a Kitchen chef`);
-    }
-  })
-
-}
+  const makeChef = () => {
+    fetch(`http://localhost:5000/users/chef/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        if (data.modifiedCount > 0) {
+          refetch();
+          toast.success(`Successfully made a Kitchen chef`);
+        }
+      });
+  };
 
   const makeAdmin = () => {
     fetch(`http://localhost:5000/users/admin/${email}`, {
@@ -49,17 +49,30 @@ const makeChef=()=>{
       <th>{email}</th>
       <td>{_id} </td>
       <td>
+        
+          
         {role !== "admin" && (
-          <button onClick={makeAdmin} className="btn btn-xs"> Make admin</button>)}
-      </td>
-      <td>
-        {role !== "chef" && (
-          <button onClick={makeChef} className="btn btn btn-xs"> Make Chef</button>)}
+          <button onClick={makeAdmin} className="btn btn-xs">
+            Make admin
+          </button>
+        )}    
+        </td>
+        <td>
+         {role !== "chef" && (
+          <button onClick={makeChef} className="btn btn btn-xs">
+            Make Chef
+          </button>
+        )}
+
+       
       </td>
 
       <td>
         <label
-          onClick={() => setDeletingUser(user)}for="delete-modal"className="btn btn-xs btn-error "> Delete User
+          onClick={() => setDeletingUser(user)}
+          htmlFor="delete-modal"
+          className="btn btn-xs btn-error ">
+          Delete  <i class="fa-solid fa-trash-can mx-1"></i>
         </label>
       </td>
     </tr>

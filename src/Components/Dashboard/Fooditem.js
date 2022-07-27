@@ -15,7 +15,9 @@ useEffect(()=>{
 // if (Loading) {
 //     return <Loading></Loading>
 // }
+const confirmFood=()=>{
 
+}
     return (
 
         <div>
@@ -71,7 +73,7 @@ useEffect(()=>{
                           <button className="btn btn-ghost btn-xs">{f.quantity}</button>
                         </th>
                         <th>
-                     <Link to="/inventory"  >   <button className="btn btn-accent  btn-sm">Order Now</button></Link>
+                  <Link to="/inventory"><button onClick={()=>confirmFood()}   className="btn btn-accent  btn-sm">Order Now</button></Link> 
      
                         </th>
                       </tr>)
