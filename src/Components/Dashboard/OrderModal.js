@@ -4,7 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 const OrderModal = ({ order, setOrder }) => {
   const { name, description, _id, quantity, price } = order;
-
   const [user] = useAuthState(auth);
   // console.log(user);
   const handleOrder = (event) => {
@@ -16,7 +15,7 @@ const OrderModal = ({ order, setOrder }) => {
       status: "pending",
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://obscure-mountain-92630.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -50,10 +49,10 @@ const OrderModal = ({ order, setOrder }) => {
           <p className="">Food Id: {_id}</p>
           <p className="fw-bold">Price: {price}</p>
 
-          <p className="pt-4 fw-bold">User Email: {user?.email || ""}</p>
+          <p className="pt-4 fw-bold">User Email: {user?.email }</p>
 
           <p>
-            <small>User name: {user?.displayName || ""}</small>
+            <small>User name: {user?.displayName }</small>
           </p>
 
           <div className="modal-action">

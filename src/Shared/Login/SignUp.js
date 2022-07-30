@@ -24,7 +24,8 @@ const SignUp = () => {
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
   // call the token, login with user or Google user
-  const [token] = useToken(user || gUser);
+  var isSignup = true;
+  const [token] = useToken(user, isSignup);
 
   let errorElement;
   if (loading || gLoading || updating) {
@@ -41,7 +42,7 @@ const SignUp = () => {
   }
 
   if (token) {
-    navigate("/");
+    navigate("/dashboard");
   }
 
   const onSubmit = async (data) => {
@@ -170,13 +171,13 @@ const SignUp = () => {
             </small>
           </p>
 
-          <div className="divider">OR</div>
+          {/* <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
             className="btn btn-outline btn btn-accent"
           >
             CONTINUE WITH GOOGLE
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

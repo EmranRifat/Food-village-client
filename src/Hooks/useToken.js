@@ -1,7 +1,7 @@
 // import { toBeEmpty } from "@testing-library/jest-dom/dist/matchers";
 import { useEffect, useState } from "react";
 
-const useToken = (user) => {
+const useToken = (user, isSignup) => {
   const [token, setToken] = useState("");
 
   useEffect(() => {
@@ -10,10 +10,17 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const uid = user?.user?.uid;
     const accessToken = user?.user?.accessToken;
-    const currentUser = { email: email, uid: uid, accessToken: accessToken };
+    var currentUser;
+
+    if (isSignup) {
+      currentUser = { email: email, uid: uid, accessToken: accessToken, role: 'user'};
+    } else{
+      currentUser = { email: email, uid: uid, accessToken: accessToken}
+    }
+
 
     if (email) {
-      fetch(`http://localhost:5000/users/${email}`, {
+      fetch(`https://obscure-mountain-92630.herokuapp.com/users/${email}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(currentUser),

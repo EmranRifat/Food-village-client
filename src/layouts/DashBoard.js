@@ -18,7 +18,7 @@ function DashBoard() {
             <div className="drawer drawer-mobile 	">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content ">
-            <h2 className='text-xl  text-center font-bold text-purple-500'>Welcome to Dashboard</h2>
+            <h2  className='text-xl  text-center border  rounded-xl font-bold text-purple-500 drop-shadow'>Welcome to Dashboard</h2>
             <Outlet /> 
         </div>
         <div className="drawer-side ">

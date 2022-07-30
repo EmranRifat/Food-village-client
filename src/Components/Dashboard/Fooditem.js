@@ -1,93 +1,115 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import OrderModal from './OrderModal';
+import React, { useEffect, useState } from "react";
+import Loading from "../../Shared/Loading/Loading";
+import OrderModal2 from "./OrderModal2";
+
 // import Loading from '../../Shared/Loading/Loading';
 
-const Fooditem = ({order,setOrder}) => {
-const [foods,setFoods]=useState([]);
+const Fooditem = () => {
+  const [foods, setFoods] = useState([]);
+  const [isloading, setIsloading] = useState(true);
+  const [confirmOrder,setConfirmOrder]=useState(false);
+  useEffect(() => {
+    setIsloading(true);
+    fetch("https://obscure-mountain-92630.herokuapp.com/foods")
+      .then((res) => res.json())
+      .then((data) => {
+        setFoods(data);
+        setIsloading(false);
+      });
+  }, []);
 
-useEffect(()=>{
-    fetch("http://localhost:5000/foods")
-    .then(res=>res.json())
-    .then(data=>setFoods(data))
-    },[])
+  if (isloading) {
+    return <Loading></Loading>;
+  }
 
-// if (Loading) {
-//     return <Loading></Loading>
-// }
-const confirmFood=()=>{
+  return (
+    <div>
+      {/* <h2 className="">Our Foods :{foods.length}</h2> */}
 
-}
-    return (
+      <div className="items py-2"></div>
+      <div className="overflow-x-auto w-full">
+      
+          <table className="table w-full">
+            <thead>
+              <tr>
+                <th>
+                  <label></label>
+                </th>
+                <th>Image/Name</th>
+                <th>Chefs</th>
+                <th>Token</th>
+                <th>Quantity</th>
+                <th></th>
+              </tr>
+            </thead>
 
-        <div>
-           <h2 className="text-center">Our services :{foods.length}</h2>
+            <tbody>
+            {
+            foods.map(food=><OrderModal2
+            food={food}
+            key={food._id}
+            setConfirmOrder={setConfirmOrder}
+            ></OrderModal2>)
+          }
+              {foods.map((f) => (
+                <tr key={f._id}>
+                  <th>
+                    <label>
+                      <input type="checkbox" className="checkbox" />
+                    </label>
+                  </th>
+                  <td>
+                    <div className="flex items-center space-x-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
+                          <img src={f.img} alt="food-img" />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-bold">{f.name}</div>
+                        <div className="text-sm opacity-50">Available </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{f.supplier}</td>
+                  <td>{f._id}</td>
+                  <th>
+                    <button className="btn btn-ghost btn-xs">
+                      {f.quantity}
+                    </button>
+                  </th>
+                  <th>
+                    <label
+                      htmlFor="my-modal"
+                      onClick={() =>setConfirmOrder(true)}
+                      className="btn btn-sm  font-bold text-white bg-gradient-to-r from-accent to-primary border-none  "
+                    >
+                      Order Now  <i className="fa-solid px-1 fa-cart-shopping"></i>
+                    </label>
+                   
 
-           <div  className='items py-2'>
-         
-          
-        </div>
-           <div className="overflow-x-auto w-full">
-                <table className="table w-full">
-                  <thead>
-                    <tr>
-                      <th>
-                        <label>
-                        </label>
-                      </th>
-                      <th>Image/Name</th>
-                      <th>Chefs</th>
-                      <th>Token</th>
-                      <th>Quantity</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                {
-                    foods.map(f=>
-                 
-                        <tr key={f._id}>
-                        <th>
-                          <label>
-                            <input type="checkbox" className="checkbox" />
-                          </label>
-                        </th>
-                        <td>
-                          <div className="flex items-center space-x-3">
-                            <div className="avatar">
-                              <div className="mask mask-squircle w-12 h-12">
-                                <img src={f.img}  alt="food-img"/>
-                              </div>
-                            </div>
-                            <div>
-                              <div className="font-bold">{f.name}</div>
-                              <div className="text-sm opacity-50">Available </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                         {f.supplier}
-                        
-                        </td>
-                        <td>{f._id}</td>
-                        <th>
-                          <button className="btn btn-ghost btn-xs">{f.quantity}</button>
-                        </th>
-                        <th>
-                  <Link to="/inventory"><button onClick={()=>confirmFood()}   className="btn btn-accent  btn-sm">Order Now</button></Link> 
+                    {/* <button onClick={()=>confirmFood()}   className="btn btn-accent  btn-sm">Order Now</button>
+                     */}
+                  </th>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+
+      </div>
+
+      {
+        confirmOrder&&<OrderModal2 
+        confirmOrder={confirmOrder}
+        setConfirmOrder={setConfirmOrder}
+        ></OrderModal2>
+      }
      
-                        </th>
-                      </tr>)
-                }
-                  
-                  </tbody>
-                 
-                  
-                </table>
-              </div> 
-  
-        </div>
-            
-    );
+    </div>
+    
+   
+  );
 };
 
 export default Fooditem;

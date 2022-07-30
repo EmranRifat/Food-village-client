@@ -5,26 +5,10 @@ import { toast } from "react-toastify";
 const UserRow = ({ index, user, refetch, setDeletingUser }) => {
   const { email, _id, role } = user;
 
-  const makeChef = () => {
-    fetch(`http://localhost:5000/users/chef/${email}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        if (data.modifiedCount > 0) {
-          refetch();
-          toast.success(`Successfully made a Kitchen chef`);
-        }
-      });
-  };
 
-  const makeAdmin = () => {
-    fetch(`http://localhost:5000/users/admin/${email}`, {
-      method: "PUT",
+  const roleChange = (roleset) => {
+    fetch(`https://obscure-mountain-92630.herokuapp.com/users/role/${email}/${roleset}`, {
+      method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -47,22 +31,25 @@ const UserRow = ({ index, user, refetch, setDeletingUser }) => {
     <tr>
       <th>{index + 1}</th>
       <th>{email}</th>
-      <td>{_id} </td>
+      <td>{role} </td>
+      <th>   </th>
       <td>
         
           
-        {role !== "admin" && (
-          <button onClick={makeAdmin} className="btn btn-xs">
-            Make admin
-          </button>
-        )}    
+        {role !== "admin" ? 
+          <button onClick={() => roleChange("admin")} className="btn btn-xs">
+            Make Admin
+          </button> : <button onClick={() => roleChange("user")} className="btn btn-error btn-xs">
+            Remove Admin
+          </button> }    
         </td>
         <td>
-         {role !== "chef" && (
-          <button onClick={makeChef} className="btn btn btn-xs">
+         {role !== "chef"?
+          <button onClick={() => roleChange("chef")} className="btn btn-xs">
             Make Chef
-          </button>
-        )}
+          </button> : <button onClick={() => roleChange("user")} className="btn btn-error btn-xs">
+            Remove Chef
+          </button>}
 
        
       </td>
@@ -72,7 +59,7 @@ const UserRow = ({ index, user, refetch, setDeletingUser }) => {
           onClick={() => setDeletingUser(user)}
           htmlFor="delete-modal"
           className="btn btn-xs btn-error ">
-          Delete  <i class="fa-solid fa-trash-can mx-1"></i>
+          Delete  <i className="fa-solid fa-trash-can mx-1"></i>
         </label>
       </td>
     </tr>

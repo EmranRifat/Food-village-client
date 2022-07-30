@@ -2,20 +2,26 @@ import React, { useEffect, useState } from 'react';
 import InventoryItem from '../InventoryItem/InventoryItem';
 import './inventory.css'
 import OrderModal from '../Dashboard/OrderModal';
+import Loading from '../../Shared/Loading/Loading';
+import OrderModal2 from '../Dashboard/OrderModal2';
 const Inventory = () => {
 
     const [items, setItems] = useState([]);
     const [ order,setOrder]=useState(null);
-
+    const [isLoading,setIsloading]=useState(true);
+// console.log(order);
  useEffect(() => {
-        fetch('http://localhost:5000/foods')
+    setIsloading(true)
+        fetch('https://obscure-mountain-92630.herokuapp.com/foods')
             .then(res => res.json())
-            .then(data => setItems(data));
+            .then(data => {
+                setIsloading(false)
+                setItems(data)});
         }, []);
    
-    // if(isLoading){
-    //     return<Loading></Loading>
-    // }
+    if(isLoading){
+        return<Loading></Loading>
+    }
 
     return (
         <div>
@@ -35,6 +41,8 @@ const Inventory = () => {
         order={order}
         setOrder={setOrder}
         ></OrderModal>}
+
+       
      
      
 

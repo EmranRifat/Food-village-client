@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 // import { toast } from "react-toastify";
 // import { Link, useParams } from "react-router-dom";
 const OrderList = () => {
@@ -9,11 +10,12 @@ const OrderList = () => {
   // const { userId } = useParams();
   const [orders, setOrders] = useState([]);
   var [pending, setPending] = useState([]);
+  var [isloading, setIsloading] = useState([]);
 
   // console.log(orders);
 
   const acceptFood = (id, status) => {
-    fetch(`http://localhost:5000/orderstatuschange`, {
+    fetch(`https://obscure-mountain-92630.herokuapp.com/orderstatuschange`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -29,12 +31,13 @@ const OrderList = () => {
     statusFetchHendallers("pending");
   }, []);
   const statusFetchHendallers = (status) => {
+    setIsloading(false);
     if (status === "pending") {
       setPending(true);
     } else {
       setPending(false);
     }
-    fetch(`http://localhost:5000/allorderlist/${status}`, {
+    fetch(`https://obscure-mountain-92630.herokuapp.com/allorderlist/${status}`,{
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -43,6 +46,7 @@ const OrderList = () => {
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
+        setIsloading(true);
       });
   };
   return (
@@ -81,7 +85,8 @@ const OrderList = () => {
         </button>
       </div>
       <div className="overflow-x-auto w-full">
-        <table className="table w-full">
+        {
+          isloading? <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -131,7 +136,13 @@ const OrderList = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> : <div className="text-center py-5">
+  <div className="spinner-border animate-spin w-12 h-12 border-2 rounded-full" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+</div>
+        }
+        
       </div>
     </div>
   );

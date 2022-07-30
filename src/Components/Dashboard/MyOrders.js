@@ -7,6 +7,8 @@ import { signOut } from "firebase/auth";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
+  
+  var [isloading, setIsloading] = useState([]);
   const navigate = useNavigate();
 
   // const [status, setStatus] = useState();
@@ -16,10 +18,10 @@ const MyOrders = () => {
     handlestatus("pending");
   }, [user]);
   const handlestatus = (status) => {
+    setIsloading(false);
     if (user) {
       fetch(
-        `http://localhost:5000/orderbyUser?user=${user?.uid}&&status=${status}`,
-
+        `https://obscure-mountain-92630.herokuapp.com/orderbyUser?user=${user?.uid}&&status=${status}`,
         {
           method: "GET",
           headers: {
@@ -38,6 +40,7 @@ const MyOrders = () => {
         })
         .then((data) => {
           setOrders(data);
+          setIsloading(true);
         });
     }
   };
@@ -93,7 +96,8 @@ const MyOrders = () => {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-full">
+        {
+          isloading?<table className="table table-zebra w-full">
           <thead>
             <tr>
               <th></th>
@@ -105,7 +109,12 @@ const MyOrders = () => {
             </tr>
           </thead>
           <tbody>{listData}</tbody>
-        </table>
+        </table>: <div className="text-center py-5">
+  <div className="spinner-border animate-spin w-12 h-12 border-2 rounded-full" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+</div>
+        }
       </div>
     </div>
   );

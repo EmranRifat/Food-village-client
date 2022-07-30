@@ -6,9 +6,9 @@ const Review = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data, event) => {
-    event.target.value = " ";
+    event.target.value =('');
 
-    fetch("http://localhost:5000/review", {
+    fetch("https://obscure-mountain-92630.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const Review = () => {
           <input
             style={{ border: "1px solid gray" }}
             className="mb-2 rounded-1"
-            placeholder="Photo URL"
+            placeholder="Your Email"
             type="text"
             {...register("img")}
           />

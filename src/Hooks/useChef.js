@@ -10,7 +10,7 @@ const useChef=user=>{
         const email=user?.email;
         // console.log(email)
      if(user){
-        fetch(`http://localhost:5000/chef/${email}`, {
+        fetch(`https://obscure-mountain-92630.herokuapp.com/chef/${email}`, {
             method:'GET',
             headers: {
                 'content-type': 'application/json',

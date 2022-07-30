@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import useToken from "../../Hooks/useToken";
 
 const Login = () => {
-  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  // const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =useSignInWithEmailAndPassword(auth);
 
   const {
@@ -24,34 +24,34 @@ const Login = () => {
   const location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
+  var isSignup = false;
 
-  const [token] = useToken(user || gUser);
+  const [token] = useToken(user, isSignup);
 
   let errorElement;
 
-  if (loading || gLoading) {
+  if (loading ) {
     return <Loading></Loading>;
   }
-  if(user||gUser){
-      navigate('/')
+  if(user){
+      navigate('/Dashboard')
   }
   if (token) {
     navigate(from, { replace: true });
     // console.log("token from login",token);
   }
 
-  if (error || gError) {
+  if (error ) {
     errorElement = (
       <div>
         <p className="text-red-500 mb-2">
-          <small>Error: {error?.message || gError?.message}</small>
+          <small>Error: {error?.message }</small>
         </p>
       </div>
     );
   }
 
   const onSubmit = (data) => {
-    // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     toast.success("Successfully Loged In");
   };
@@ -143,10 +143,10 @@ const Login = () => {
             </small>
           </p>
 
-          <div className="divider">OR</div>
-          <button onClick={() => signInWithGoogle()}className="btn btn-outline btn btn-accent">
+          {/* <div className="divider">OR</div> */}
+          {/* <button onClick={() => signInWithGoogle()}className="btn btn-outline btn btn-accent">
             CONTINUE WITH GOOGLE
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -7,23 +7,24 @@ import DeleteModal from './DeleteModal';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    const user=useAuthState(auth);
+    const user = useAuthState(auth);
     // console.log(user);
     const [deletingUser,setDeletingUser]=useState(null);
 
 
-    const { data: users, isLoading ,refetch} = useQuery('users', () => fetch('http://localhost:5000/users',{
+    const { data:users, isLoading ,refetch} = useQuery('users', () => fetch('https://obscure-mountain-92630.herokuapp.com/users',{
        method:'GET',
        headers:{
         authorization:`Bearer ${localStorage.getItem('accessToken')}`
        } 
     }).then(res => res.json()));
+    // console.log(users);
     if(isLoading){
         return <Loading></Loading>
     }
 // const makeAdmin=()=>{
    
-//     fetch(`http://localhost:5000/users/admin/${''}`)
+//     fetch(`https://obscure-mountain-92630.herokuapp.com/users/admin/${''}`)
 
 // }
     
@@ -36,8 +37,11 @@ const AllUsers = () => {
                 <thead>
                     <tr>
                         <th></th>
+                        
                         <th className="active">email</th>
-                        <th>Id</th>
+                        <th>Role</th>
+                        <th></th>
+                        <th></th>
                         <th></th>
                         <th>Status</th>
                         {/* <th>Time</th> */}

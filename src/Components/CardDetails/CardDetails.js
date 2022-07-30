@@ -8,7 +8,7 @@ const CardDetails = () => {
 
     useEffect(()=>{
 
-        fetch(`http://localhost:5000/fooddetails/${userId}`)
+        fetch(`https://obscure-mountain-92630.herokuapp.com/fooddetails/${userId}`)
         .then(res=>res.json())
         .then(data=>setUsers(data))
 

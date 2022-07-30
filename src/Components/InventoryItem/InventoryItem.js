@@ -1,6 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './InventoryItem.css'
+import { toast } from "react-toastify";
+
 const InventoryItem = ({item,setOrder}) => {
+
+    const [user] = useAuthState(auth);
 
     const { name, img, _id, price, description, quantity, supplier } = item;
 
@@ -30,8 +36,17 @@ const InventoryItem = ({item,setOrder}) => {
         
                 <label
                  htmlFor="my-modal-6" 
-                onClick={()=>setOrder(item)}
-                className="btn modal-button btn btn-sm  font-bold text-white bg-gradient-to-r from-accent to-primary border-none  ml-9 btn-sm">Order Now
+                onClick={()=>{
+                    if(user){
+                        setOrder(item)
+                    }
+                    else{
+                        toast.error("Login first..!")
+                    }
+                   
+                
+                }}
+                className="btn modal-button btn btn-sm  font-bold text-white bg-gradient-to-r from-accent to-primary border-none  ml-9 btn-sm"><i className="fa-solid px-1 fa-cart-plus"></i> Order Now 
                 </label>
 
                 </div>
