@@ -7,7 +7,7 @@ import OrderModal2 from "./OrderModal2";
 const Fooditem = () => {
   const [foods, setFoods] = useState([]);
   const [isloading, setIsloading] = useState(true);
-  const [confirmOrder,setConfirmOrder]=useState(false);
+  const [confirmOrder,setConfirmOrder]=useState({isOpen:false,id:""});
   useEffect(() => {
     setIsloading(true);
     fetch("https://obscure-mountain-92630.herokuapp.com/foods")
@@ -44,13 +44,7 @@ const Fooditem = () => {
             </thead>
 
             <tbody>
-            {
-            foods.map(food=><OrderModal2
-            food={food}
-            key={food._id}
-            setConfirmOrder={setConfirmOrder}
-            ></OrderModal2>)
-          }
+           
               {foods.map((f) => (
                 <tr key={f._id}>
                   <th>
@@ -81,7 +75,7 @@ const Fooditem = () => {
                   <th>
                     <label
                       htmlFor="my-modal"
-                      onClick={() =>setConfirmOrder(true)}
+                      onClick={() =>setConfirmOrder({isOpen:true,id:f._id})}
                       className="btn btn-sm  font-bold text-white bg-gradient-to-r from-accent to-primary border-none  "
                     >
                       Order Now  <i className="fa-solid px-1 fa-cart-shopping"></i>
@@ -100,8 +94,9 @@ const Fooditem = () => {
       </div>
 
       {
-        confirmOrder&&<OrderModal2 
-        confirmOrder={confirmOrder}
+        confirmOrder.isOpen &&<OrderModal2 
+         food={foods}
+        confirmOrder={confirmOrder }
         setConfirmOrder={setConfirmOrder}
         ></OrderModal2>
       }

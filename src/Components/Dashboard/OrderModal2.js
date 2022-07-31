@@ -3,10 +3,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
-const OrderModal2 = ({food,setConfirmOrder}) => {
+const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
     // const { name, description, _id, quantity, price } = food;
+    var jodu =food.filter(item=>item._id===confirmOrder.id)[0]
+    console.log(jodu);
     const [user] = useAuthState(auth);
-    console.log(food);
+    // console.log(food);
 
     const ConfirmOrder=(event)=>{
         event.preventDefault();
@@ -28,7 +30,7 @@ const OrderModal2 = ({food,setConfirmOrder}) => {
             });
       
           // to closed the modal
-          setConfirmOrder(null);
+          setConfirmOrder({isOpen:false,id:''});
       
 
     }
