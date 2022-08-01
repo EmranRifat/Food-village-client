@@ -5,8 +5,9 @@ import auth from "../../firebase.init";
 
 const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
     // const { name, description, _id, quantity, price } = food;
-    var meal =food.filter(item=>item._id===confirmOrder.id)[0]
+    var meal =food.filter(item=>item._id===confirmOrder.id)[0];
     const {_id}=meal;
+
     console.log(_id)
     // console.log(meal);
     const [user] = useAuthState(auth);
