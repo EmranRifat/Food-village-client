@@ -5,15 +5,17 @@ import auth from "../../firebase.init";
 
 const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
     // const { name, description, _id, quantity, price } = food;
-    var jodu =food.filter(item=>item._id===confirmOrder.id)[0]
-    console.log(jodu);
+    var meal =food.filter(item=>item._id===confirmOrder.id)[0]
+    const {_id}=meal;
+    console.log(_id)
+    // console.log(meal);
     const [user] = useAuthState(auth);
     // console.log(food);
 
     const ConfirmOrder=(event)=>{
         event.preventDefault();
         const order = {
-            foodId: {},
+            foodId:_id,
             userId: user?.uid,
             status: "pending",
           };
@@ -46,11 +48,11 @@ const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
           ✕
         </label>
 
-        <h3 className="font-bold text-lg text-accent">Order for: {} </h3>
-        <p className="">Quantity: {}</p>
-        <p className="">Details: {}</p>
-        <p className="">Food Id: {}</p>
-        <p className="fw-bold">Price: {}</p>
+        <h3 className="font-bold text-lg text-accent">Order for: {meal.name} </h3>
+        <p className="">Quantity: {meal.quantity}</p>
+        <p className="">Details: {meal.description}</p>
+        <p className="">Food Id: {meal._id}</p>
+        <p className="fw-bold">Price: {meal.price}</p>
 
         <p className="pt-4 fw-bold">User Email: {user?.email }</p>
 
