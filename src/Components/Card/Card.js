@@ -12,7 +12,7 @@ const Card = ({card}) => {
     
     const { name, img, _id, price, description, quantity, supplier } = card;
     return (
-        <div className='g-5 card-section '>
+        <div className=' card-section '>
         <div className="item-card" style={{ width: "18rem" }}>
             <img className='w-100 card-img-top' style={{ height: "12rem" }} src={img}  alt="..." />
             <div  style={{ height: "15rem" }}className="card-body ">

@@ -2,13 +2,15 @@
     color: rgb(238, 114, 12);
     font-size: xx-large;
     font-weight: 600;
+    align-items: center;
+    justify-content:center;
 }
 
 .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px; 
-    marginLeft: 10px;
+    margin-Left: 10%;
     margin-top: 20px;
     justify-content: center;
 }

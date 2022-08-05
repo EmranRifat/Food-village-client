@@ -1,21 +1,38 @@
 import React from 'react';
-import appoin from '../../Assets/Images/appointment.png';
-
+import "./Form.css";
+import ring1 from "../../Assets/Images/Group 4.png"
+import ring2 from "../../Assets/Images/Group 3.png"
 
 const Form = () => {
     return (
-        <div style={{ background: `url(${appoin})` }} className=''>
-            <div className='text-center py-4'>
-                <h4 className='text-xl text-accent font-bold'>Testimonials</h4>
-                <h2 className='text-4xl text-white'>KEEP IN OUR TOUCH</h2>
+
+       <div >
+
+
+         <div className='ring-card flex mt-12  '> 
+         <div>
+           <img className='ring-burger  w-20 ' src={ring1} alt="ring" />
+           </div>
+
+           <div class="card  w-8/12 rounded-3xl bg-neutral text-neutral-content">   
+           <div class="card-body flex card-height ">
+            <div className=' items-center text-center '>
+            <h2 class=" font-bold text-3xl">Discover Restaurant near From You</h2>
+             <p>We are using cookies for no reason.</p>
+             <div class="card-actions justify-center">
+             <button style={{"backgroundColor":"orange"}} class="btn  mx-4 rounded-3xl text-white">Get Started</button>
             </div>
-            <div className='text-center my-8 pb-8 '>
-                <input type="text" placeholder="Email Address" className="input input-bordered input-primary w-full max-w-xs my-2 " /><br />
-                <input type="text" placeholder="Subject " className="input input-bordered input-primary w-full max-w-xs my-2 " /><br />
-                <textarea className="textarea textarea-accent w-full max-w-xs" placeholder="Your massage Type here"></textarea><br />
-                <button className="btn btn-accent uppercase text-white font-bold">Submit</button>
-            </div>
-        </div>
+             </div>
+           </div>
+         </div>
+         <div>
+           <img className='ring-burger2  w-20 ' src={ring2} alt="ring" />
+           </div>
+
+
+           </div>
+           
+       </div>
     );
 };
 

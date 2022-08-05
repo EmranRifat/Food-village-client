@@ -2,9 +2,9 @@ import React from 'react';
 import './Chefs.css';
 const Chefs = () => {
     return (
-        <div className=' bg-base-200' >
+        <div className=' bg-base-100 ' >
             <h4  className='text-center fw-bold text-xl text-warning font-Lobster '>Experience team</h4>
-            <h2 className='text-center fw-bold text-2xl text-accent'>MEET OUR CHEFS</h2>
+            <h1 className='text-center fw-bold text-4xl text-accent'>MEET OUR CHEFS</h1>
            
             <div className='chefs py-4 pl-10'>
             <div className="card w-96 bg-base-100 shadow-xl">

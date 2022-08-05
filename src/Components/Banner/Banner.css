@@ -56,3 +56,81 @@ h6 {
 .carousel-item .img{
     object-fit: cover;
 }
+.carousel-control-next-icon,.carousel-control-prev-icon{
+
+    height: 40px;
+    width: 40px;
+
+    /* border: 1px solid black;
+    filter: invert(100%) */
+}
+.singlecard{
+    right: -148%;
+    margin-top: 175%;
+}
+
+.img-more{
+    position: absolute;
+    margin-right: -142px;
+    right: -132%;
+    top: 44%;
+    z-index: 2;
+    width: 138px;
+    
+}
+.arrow-card{
+    margin-left: -200%;
+    margin-top: -18%;
+}
+.arrow-card2{
+    margin-left: -74%;
+    margin-top: -52%;
+}
+.anh-001{
+
+position: absolute;
+margin-left: -201%;
+margin-top: -20%;
+    z-index: 2;
+    width: 40%;
+}
+.anh-002{
+
+position: absolute;
+margin-left: -70%;
+margin-top: -59%;
+z-index: 2;
+width: 32%;
+}
+
+.img-slider{
+    width: 30%;
+}
+#img-0014{
+    position: absolute;
+    margin-right: 7px;
+    top: 55%;
+}
+.card-Vagetable{
+    /* padding-top: 17px; */
+    /* padding-left: 119px; */
+    padding-top:12px;
+    padding-left: 108px;
+
+    /* padding-top: 19px; */
+    /* line-height: 0.2; */
+    /* padding-top: 2px; */
+}
+.slider-btn2{
+    margin-left: -28px;
+}
+.ratting{
+    line-height: 0.2;
+}
+#card-100{
+    margin-top: -4%;
+}
+#fride01{
+    margin-top: -5%;
+    margin-left: 10%;
+}

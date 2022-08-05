@@ -1,0 +1,32 @@
+.card-body1{
+    justify-content: left;
+    text-align: left;    
+}
+
+.rounded-3xl {
+    margin-right: 53px;
+    margin-top: 12px;
+}
+.rotate-pricing{
+    width: 209px;
+    height: 243px;
+    background-color: rgb(255 166 0 / 83%);
+    transform: rotate(18deg);
+    /* margin-top: 15%; */
+    top: -12%;
+    position: absolute;
+    right: 54%;
+
+    position: absolute;
+
+}
+.rotate-black{
+    width: 250px;
+    height: 401px;
+    background-color: rgb(255 166 0 / 83%);
+    transform: rotate(47deg);
+    position: absolute;
+    top: 18%;
+    right: 18%;
+    margin-right: 80px;
+}

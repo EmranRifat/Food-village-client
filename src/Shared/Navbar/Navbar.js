@@ -46,14 +46,14 @@ const menuItems = <>
 
 
 
-<li>{user ? <button className="btn btn-ghost" onClick={logout}>SignOut</button>
+<li>{user ? <button className="btn btn-warning rounded-3xl text-white " onClick={logout}>SignOut</button>
     : <Link to="/login">Login</Link>}</li>
 
 </>
 
 
     return (
-      <div className="navbar bg-base-100 px-10">
+      <div className="navbar bg-base-100 px-10 ">
       <div className="navbar-start">
           <div className="dropdown">
               <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -63,7 +63,7 @@ const menuItems = <>
                   {menuItems}
               </ul>
           </div>
-          <a href="/" className="btn btn-ghost normal-case text-2xl fw-bold">FOOD<span className='text-orange-600'>RANGER</span></a>
+          <a href="/" className="btn btn-ghost normal-case text-3xl fw-bold">FOOD<span className='text-orange-600'>RANGER</span></a>
       </div>
       <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">

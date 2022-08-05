@@ -57,7 +57,7 @@ const SignUp = () => {
     <div className="flex h-screen  bg-base-200 justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-center text-2xl pt-4 font-bold">Sign-Up</h2>
+          <h2 className="text-center text-2xl pt-4 font-bold ">Sign-Up</h2>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className=" w-full max-w-xs">

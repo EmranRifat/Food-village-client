@@ -33,7 +33,7 @@ const menuItems = <>
 } */}
 
 
-<li>{user ? <button className="btn btn-ghost" onClick={logout}>SignOut</button>
+<li>{user ? <button className="btn btn-ghost rounded-3xl " onClick={logout}>SignOut</button>
     : <Link to="/login">Login</Link>}</li>
 
 </>
