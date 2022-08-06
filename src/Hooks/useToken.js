@@ -7,7 +7,7 @@ const useToken = (user, isSignup) => {
   useEffect(() => {
     //         // console.log('user inside useToken ', user);
 
-    const email = user?.user?.email;
+    const email = user?.user.email;
     const uid = user?.user?.uid;
     const accessToken = user?.user?.accessToken;
     var currentUser;
@@ -20,7 +20,11 @@ const useToken = (user, isSignup) => {
 
 
     if (email) {
-      fetch(`https://obscure-mountain-92630.herokuapp.com/users/${email}`, {
+      fetch(`
+http://localhost:5000
+
+
+/users/${email}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(currentUser),

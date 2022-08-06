@@ -12,7 +12,7 @@ const Inventory = () => {
 // console.log(order);
  useEffect(() => {
     setIsloading(true)
-        fetch('https://obscure-mountain-92630.herokuapp.com/foods')
+        fetch('http://localhost:5000/foods')
             .then(res => res.json())
             .then(data => {
                 setIsloading(false)

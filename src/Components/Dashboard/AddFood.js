@@ -7,7 +7,7 @@ const AddFood = () => {
     const { register, handleSubmit } = useForm();
    
     const onSubmit = data =>{
-const url=`https://obscure-mountain-92630.herokuapp.com/foods`;
+const url=`http://localhost:5000/foods`;
 fetch (url,{
     method:'POST',
     headers:{

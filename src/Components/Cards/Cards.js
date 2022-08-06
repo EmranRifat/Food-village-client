@@ -8,7 +8,7 @@ const Cards = () => {
   const foods = cards.slice(0, 3);
   // console.log(cards);
   useEffect(() => {
-    fetch("https://obscure-mountain-92630.herokuapp.com/foods")
+    fetch("http://localhost:5000/foods")
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, []);

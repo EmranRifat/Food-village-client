@@ -15,7 +15,7 @@ const OrderList = () => {
   // console.log(orders);
 
   const acceptFood = (id, status) => {
-    fetch(`https://obscure-mountain-92630.herokuapp.com/orderstatuschange`, {
+    fetch(`http://localhost:5000/orderstatuschange`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,7 @@ const OrderList = () => {
     } else {
       setPending(false);
     }
-    fetch(`https://obscure-mountain-92630.herokuapp.com/allorderlist/${status}`,{
+    fetch(`http://localhost:5000/allorderlist/${status}`,{
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

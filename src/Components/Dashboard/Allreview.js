@@ -8,7 +8,7 @@ const Allreview = () => {
     
     useEffect(()=>{
       setIsloading(false);
-        fetch('https://obscure-mountain-92630.herokuapp.com/review')
+        fetch('http://localhost:5000/review')
         .then(res=>res.json())
         .then(data=>{
           setReviews(data);

@@ -8,8 +8,11 @@ import SubNavbar from '../Shared/Navbar/SubNavbar';
 
 function DashBoard() {
     const [user] = useAuthState(auth);
+    
     const [admin]=useAdmin(user); 
-    const [chef]=useChef(user);
+    // console.log(;fdsdf);
+    const [chef]=useChef();
+    // console.log(user)
     // console.log(chef);
     // console.log(admin); 
     return (

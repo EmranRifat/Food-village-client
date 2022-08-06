@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
@@ -13,7 +15,7 @@ const Kitchen = () => {
   // console.log(orders);
 
   const acceptFood = (id, status) => {
-    fetch(`https://obscure-mountain-92630.herokuapp.com/orderstatuschange`, {
+    fetch(`http://localhost:5000/orderstatuschange`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -35,7 +37,7 @@ const Kitchen = () => {
     } else {
       setPending(false);
     }
-    fetch(`https://obscure-mountain-92630.herokuapp.com/allorderlist/${status}`, {
+    fetch(`http://localhost:5000/allorderlist/${status}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

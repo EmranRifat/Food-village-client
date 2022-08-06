@@ -1,28 +1,32 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-const useAdmin = user => {
-    const [admin, setAdmin] = useState(false);
-    const [adminLoading, setAdminLoading] = useState(true);
-    // console.log(admin);
-    useEffect( () =>{
-        const email = user?.email;
-        if(email){
-            fetch(`https://obscure-mountain-92630.herokuapp.com/admin/${email}`, {
-                method:'GET',
-                headers: {
-                    'content-type': 'application/json',
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-            .then(res=>res.json())
-            .then(data => {
-                setAdmin(data.admin);
-                setAdminLoading(false);
-            })
+const useAdmin = (user) => {
+  const [admin, setAdmin] = useState(false);
+  const [adminLoading, setAdminLoading] = useState(true);
+  // console.log(admin);
+  useEffect(() => {
+    // console.log(user);
+    const email = user.email;
+    if (email) {
+      fetch(
+        `http://localhost:5000/admin/${email}`,
+        {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
         }
-    }, [user])
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setAdmin(data.admin);
+          setAdminLoading(false);
+        });
+    }
+  }, [user]);
 
-    return [admin, adminLoading]
-}
+  return [admin, adminLoading];
+};
 
 export default useAdmin;

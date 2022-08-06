@@ -12,7 +12,7 @@ const AllUsers = () => {
     const [deletingUser,setDeletingUser]=useState(null);
 
 
-    const { data:users, isLoading ,refetch} = useQuery('users', () => fetch('https://obscure-mountain-92630.herokuapp.com/users',{
+    const { data:users, isLoading ,refetch} = useQuery('users', () => fetch('http://localhost:5000/users',{
        method:'GET',
        headers:{
         authorization:`Bearer ${localStorage.getItem('accessToken')}`

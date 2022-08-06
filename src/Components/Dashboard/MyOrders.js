@@ -20,8 +20,7 @@ const MyOrders = () => {
   const handlestatus = (status) => {
     setIsloading(false);
     if (user) {
-      fetch(
-        `https://obscure-mountain-92630.herokuapp.com/orderbyUser?user=${user?.uid}&&status=${status}`,
+      fetch(`http://localhost:5000/orderbyUser?user=${user?.uid}&&status=${status}`,
         {
           method: "GET",
           headers: {

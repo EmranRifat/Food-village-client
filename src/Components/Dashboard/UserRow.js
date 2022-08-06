@@ -7,7 +7,7 @@ const UserRow = ({ index, user, refetch, setDeletingUser }) => {
 
 
   const roleChange = (roleset) => {
-    fetch(`https://obscure-mountain-92630.herokuapp.com/users/role/${email}/${roleset}`, {
+    fetch(`http://localhost:5000/users/role/${email}/${roleset}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

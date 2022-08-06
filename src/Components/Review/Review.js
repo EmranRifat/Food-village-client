@@ -8,7 +8,7 @@ const Review = () => {
   const onSubmit = (data, event) => {
     event.target.value =('');
 
-    fetch("https://obscure-mountain-92630.herokuapp.com/review", {
+    fetch("http://localhost:5000/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

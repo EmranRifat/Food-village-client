@@ -23,6 +23,8 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  console.log(location.state);
+
   let from = location.state?.from?.pathname || "/";
   var isSignup = false;
 
@@ -30,9 +32,9 @@ const Login = () => {
 
   let errorElement;
 
-  if (loading ) {
-    return <Loading></Loading>;
-  }
+  // if (loading ) {
+  //   return <Loading></Loading>;
+  // }
   if(user){
       navigate('/Dashboard')
   }
