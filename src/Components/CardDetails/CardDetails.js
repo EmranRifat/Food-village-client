@@ -20,9 +20,9 @@ const CardDetails = () => {
 
     return (
         <div className="  text-center  justify-center  content-center">
-           <h2 className='pt-16 font-bold'>Welcome to detail Id: {users._id}</h2> 
+           <h2 className='pt-16 font-bold'>Welcome to Food Details, Id: {users._id}</h2> 
          
-   <div style={{'marginLeft':'25%'}}  className="card w-50 justify-center content-center items-center  text-center	 bg-base-100 my-4  shadow-xl">
+   <div style={{'marginLeft':'25%'}}  className="card w-50 py-8 justify-center content-center items-center  text-center	 bg-base-100 my-4  shadow-xl">
   <figure><img  src={users.img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{users.name}
