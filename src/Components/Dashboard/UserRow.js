@@ -7,7 +7,8 @@ const UserRow = ({ index, user, refetch, setDeletingUser }) => {
 
 
   const roleChange = (roleset) => {
-    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+    fetch(`https://afternoon-island-51531.herokuapp.com
+
 
 
 /users/role/${email}/${roleset}`, {

@@ -6,7 +6,8 @@ const DeleteModal = ({deletingUser,refetch,setDeletingUser}) => {
 const {email}=deletingUser;
 
 const handleDelete=()=>{
-    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+    fetch(`https://afternoon-island-51531.herokuapp.com
+
 
 /users/${email}`,{
         method:'DELETE',

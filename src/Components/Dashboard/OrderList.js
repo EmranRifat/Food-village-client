@@ -15,7 +15,8 @@ const OrderList = () => {
   // console.log(orders);
 
   const acceptFood = (id, status) => {
-    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+    fetch(`https://afternoon-island-51531.herokuapp.com
+
 /orderstatuschange`, {
       method: "POST",
       headers: {
@@ -38,7 +39,8 @@ const OrderList = () => {
     } else {
       setPending(false);
     }
-    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+    fetch(`https://afternoon-island-51531.herokuapp.com
+
 
 
 /allorderlist/${status}`,{

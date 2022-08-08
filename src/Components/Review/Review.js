@@ -8,7 +8,7 @@ const Review = () => {
   const onSubmit = (data, event) => {
     event.target.value =('');
 
-    fetch("https://git.heroku.com/secret-scrubland-79213.git/review", {
+    fetch("https://afternoon-island-51531.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

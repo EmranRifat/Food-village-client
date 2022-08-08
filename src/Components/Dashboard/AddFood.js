@@ -7,7 +7,8 @@ const AddFood = () => {
     const { register, handleSubmit } = useForm();
    
     const onSubmit = data =>{
-const url=`https://git.heroku.com/secret-scrubland-79213.git
+const url=`https://afternoon-island-51531.herokuapp.com
+
 
 
 /foods`;

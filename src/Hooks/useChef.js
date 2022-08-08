@@ -13,7 +13,8 @@ const useChef =user =>{
         var email=user?.email;
       
      if(user){
-        fetch(`https://git.heroku.com/secret-scrubland-79213.git
+        fetch(`https://afternoon-island-51531.herokuapp.com
+
 
 
 /chef/${email}`, {

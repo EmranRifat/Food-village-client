@@ -20,8 +20,7 @@ const MyOrders = () => {
   const handlestatus = (status) => {
     setIsloading(false);
     if (user) {
-      fetch(`https://git.heroku.com/secret-scrubland-79213.git
-/orderbyUser?user=${user?.uid}&&status=${status}`,
+      fetch(`https://afternoon-island-51531.herokuapp.com/orderbyUser?user=${user?.uid}&&status=${status}`,
         {
           method: "GET",
           headers: {
