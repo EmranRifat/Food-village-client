@@ -25,7 +25,7 @@ const Services = () => {
             <div className="card1 relative">
               <div className="relative ">
                 <img id="img-001" className="img1 " src={cut} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-200 shadow-xl ">
+                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
@@ -68,7 +68,7 @@ const Services = () => {
                   src={fernando}
                   alt="pizza"
                 />
-                <div class="card w-64 h-40 bg-base-200 shadow-xl ">
+                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
@@ -108,7 +108,7 @@ const Services = () => {
                 {/* <div className='rotate rounded-2xl '></div> */}
 
                 <img id="img-003" className="img1 " src={musroom} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-200 shadow-xl ">
+                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
@@ -146,8 +146,8 @@ const Services = () => {
               <div className="relative">
                 {/* <div className='rotate rounded-2xl '></div> */}
 
-                <img className="img1 " src={cut} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-200 shadow-xl ">
+                <img id="img101" className="img1 " src={cut} alt="pizza" />
+                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>

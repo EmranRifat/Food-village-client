@@ -20,9 +20,20 @@
         width: auto;
         position: absolute;
         top: -113px;
-        right: 70%;
+        right: 60%;
         /* bottom: -54%; */
         z-index: 1;
+     
+    }
+#img101{
+ 
+    height: 108%;
+    width: auto;
+    position: absolute;
+    top: -99px;
+    right: 62%;
+    /* bottom: -54%; */
+    z-index: 1;
      
     }
 
@@ -67,14 +78,14 @@
 }
 #img-001{
     position: absolute;
-    margin-right: -100px;
+    margin-right: -110px;
 }
 #img-007{
-    height: 80%;
+    height: 72%;
     width: auto;
     position: absolute;
-    top: -73px;
-    right: 70%;
+    top: -61px;
+    right: 63%;
     /* bottom: -54%; */
     z-index: 1;
 }
@@ -83,7 +94,7 @@
     width: auto;
     position: absolute;
     top: -70px;
-    right: 32%;
+    right: 17%;
     /* bottom: -54%; */
     z-index: 1;
 }
