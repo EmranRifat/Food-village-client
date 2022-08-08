@@ -27,21 +27,17 @@ import Chefs from './Components/Chefs/Chefs';
 import Web from './layouts/Web';
 import Auth from './layouts/Auth';
 import DashBoard from './layouts/DashBoard';
-
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from './firebase.init';
 import Error from './Components/Error/Error';
 import RequireAdmin from './Shared/Login/RequireAdmin';
 import CardDetails from './Components/CardDetails/CardDetails';
 import Kitchen from './Components/Dashboard/Kitchen';
 
 function App() {
-  const [user] = useAuthState(auth);
-    console.log(user);
+  
   return (
     <div>
-      <h1>blaaa</h1>
+  
 
        <Routes>
        

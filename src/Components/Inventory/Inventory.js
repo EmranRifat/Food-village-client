@@ -12,7 +12,7 @@ const Inventory = () => {
 // console.log(order);
  useEffect(() => {
     setIsloading(true)
-        fetch('http://localhost:5000/foods')
+        fetch('https://git.heroku.com/secret-scrubland-79213.git/foods')
             .then(res => res.json())
             .then(data => {
                 setIsloading(false)

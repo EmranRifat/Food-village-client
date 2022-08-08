@@ -18,7 +18,7 @@ const OrderModal = ({ order, setOrder }) => {
       status: "pending",
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://git.heroku.com/secret-scrubland-79213.git/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

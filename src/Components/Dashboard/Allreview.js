@@ -8,7 +8,7 @@ const Allreview = () => {
     
     useEffect(()=>{
       setIsloading(false);
-        fetch('http://localhost:5000/review')
+        fetch('https://git.heroku.com/secret-scrubland-79213.git/review')
         .then(res=>res.json())
         .then(data=>{
           setReviews(data);

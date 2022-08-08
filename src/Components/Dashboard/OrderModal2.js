@@ -7,11 +7,8 @@ const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
     // const { name, description, _id, quantity, price } = food;
     var meal =food.filter(item=>item._id===confirmOrder.id)[0];
     const {_id}=meal;
-
-    console.log(_id)
     // console.log(meal);
     const [user] = useAuthState(auth);
-    console.log(user);
 
     const ConfirmOrder=(event)=>{
         event.preventDefault();
@@ -22,7 +19,7 @@ const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
             status: "pending",
           };
 
-          fetch("http://localhost:5000/order", {
+          fetch("https://git.heroku.com/secret-scrubland-79213.git/order", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -35,7 +32,7 @@ const OrderModal2 = ({food,setConfirmOrder,confirmOrder}) => {
             });
       
           // to closed the modal
-          setConfirmOrder({isOpen:false,id:''});
+          setConfirmOrder({isOpen:false,id:'OrderModal'});
       
 
     }

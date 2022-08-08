@@ -7,7 +7,10 @@ const UserRow = ({ index, user, refetch, setDeletingUser }) => {
 
 
   const roleChange = (roleset) => {
-    fetch(`http://localhost:5000/users/role/${email}/${roleset}`, {
+    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+
+
+/users/role/${email}/${roleset}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

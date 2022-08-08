@@ -15,7 +15,8 @@ const OrderList = () => {
   // console.log(orders);
 
   const acceptFood = (id, status) => {
-    fetch(`http://localhost:5000/orderstatuschange`, {
+    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+/orderstatuschange`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +38,10 @@ const OrderList = () => {
     } else {
       setPending(false);
     }
-    fetch(`http://localhost:5000/allorderlist/${status}`,{
+    fetch(`https://git.heroku.com/secret-scrubland-79213.git
+
+
+/allorderlist/${status}`,{
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

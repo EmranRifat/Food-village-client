@@ -10,7 +10,7 @@ const Fooditem = () => {
   const [confirmOrder,setConfirmOrder]=useState({isOpen:false,id:""});
   useEffect(() => {
     setIsloading(true);
-    fetch("http://localhost:5000/foods")
+    fetch("https://git.heroku.com/secret-scrubland-79213.git/foods")
       .then((res) => res.json())
       .then((data) => {
         setFoods(data);

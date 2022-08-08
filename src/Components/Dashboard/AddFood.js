@@ -7,7 +7,10 @@ const AddFood = () => {
     const { register, handleSubmit } = useForm();
    
     const onSubmit = data =>{
-const url=`http://localhost:5000/foods`;
+const url=`https://git.heroku.com/secret-scrubland-79213.git
+
+
+/foods`;
 fetch (url,{
     method:'POST',
     headers:{

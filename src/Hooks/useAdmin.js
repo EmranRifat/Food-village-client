@@ -9,7 +9,10 @@ const useAdmin = (user) => {
     const email = user.email;
     if (email) {
       fetch(
-        `http://localhost:5000/admin/${email}`,
+        `https://git.heroku.com/secret-scrubland-79213.git
+
+
+/admin/${email}`,
         {
           method: "GET",
           headers: {
