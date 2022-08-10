@@ -14,11 +14,11 @@ const Form = () => {
            <img className='ring-burger  w-20 ' src={ring1} alt="ring" />
            </div>
 
-           <div class="card  w-8/12 rounded-3xl bg-neutral text-neutral-content">   
+           <div class="card res-burger-card w-8/12 rounded-3xl bg-neutral text-neutral-content">   
            <div class="card-body flex card-height ">
-            <div className=' items-center text-center '>
-            <h2 class=" font-bold text-3xl">Discover Restaurant near From You</h2>
-             <p>We are using cookies for no reason.</p>
+            <div className=' '>
+            <h2 class=" font-bold res-bold text-3xl">Discover Restaurant near From You</h2>
+             <p className='res-burger-p'>We are using cookies for no reason.</p>
              <div class="card-actions justify-center">
              <button style={{"backgroundColor":"orange"}} class="btn  mx-4 rounded-3xl text-white">Get Started</button>
             </div>

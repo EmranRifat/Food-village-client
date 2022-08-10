@@ -16,15 +16,28 @@
 }
 
 @media only screen and (max-width:576px) {
+   .res-inventory-card{
+            padding-right:65%;
+            padding-bottom:5%;
+            gap: 20px;
+        }
+        #features{
+                padding-left: 0;
+            
+        }
+        .res-food{
+            font-size: 19px;
+        }
+        .res-explore{
+            font-size: 12px;
+        }
+        
+          
+        
+        
+        
+        
 
-    .services {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 5px; 
-        marginLeft: 10px;
-        margin-top: 20px;
-        justify-content: center;
-    }
 
 
 

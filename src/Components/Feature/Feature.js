@@ -1,10 +1,11 @@
 import React from "react";
 import offer from "../../Assets/Images/offer.png"
 import food from "../../Assets/Images/nikolay-smeh-gPpbFaEkl00-unsplash-removebg-preview.png"
-import delevary from "../../Assets/Images/Background.png"
+import delevary from "../../Assets/Images/Background.png";
+import "./Feature.css";
 const Feature = () => {
   return (
-    <div className=" bg-base-100 py-12">
+    <div className=" bg-base-100 py-12 container">
       <h1 className="text-center font-bold text-4xl py-4">Features</h1>
       <p className="text-center ">
         This lesson provide a basic framework for conducting a recipe
@@ -13,7 +14,7 @@ const Feature = () => {
 
       <div className="d-flex justify-center items-center gap-4  py-4">
         
-        <div class="card w-25 bg-base-100 shadow-2xl bg-base-100 border-none hover:bg-violet-400">
+        <div class="card w-25 bg-base-100 res-card shadow-2xl bg-base-100 border-none hover:bg-violet-400">
           <figure class="px-10 pt-10">
             <img
               src={offer}
@@ -30,7 +31,7 @@ const Feature = () => {
           </div>
         </div>
         
-        <div class="card w-25 bg-base-300 shadow-2xl bg-base-100 border-none hover:bg-violet-400 ">
+        <div class="card res-card w-25 bg-base-300 shadow-2xl bg-base-100 border-none hover:bg-violet-400 ">
           <figure class="px-10 pt-10">
             <img
               src={food}
@@ -47,8 +48,8 @@ const Feature = () => {
           </div>
         </div>
         
-        <div class="card w-25 bg-base-100 shadow-2xl bg-base-100 border-none hover:bg-violet-400">
-          <figure class="px-10 pt-10">
+        <div class="card res-card w-25 bg-base-100 shadow-2xl bg-base-100 border-none hover:bg-violet-400">
+          <figure class="px-10 pt-6">
             <img
               src={delevary}
               alt="Shoes"

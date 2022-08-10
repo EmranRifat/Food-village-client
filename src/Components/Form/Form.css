@@ -30,3 +30,63 @@
     padding-bottom:10%;
     padding-top:10%;
 }
+@media only screen and (max-width:576px) {
+
+
+    
+    .ring-burger2 {
+        position: absolute;
+        height: auto;
+        width: 18%;
+        z-index: 2;
+        margin-left: -122px;
+        margin-top: 18px;
+    }
+    .ring-burger {
+        position: absolute;
+        height: auto;
+        width: 18%;
+        z-index: 2;
+        margin-left: 2%;
+        margin-top: 20px;
+    } 
+    .font-bold {
+       
+        font-size: 14px;
+        margin-left: -49px;
+    }
+    
+
+.ring-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: -33px;
+    z-index: 2;
+    /* height: 120%; */
+    margin-bottom: -63px;
+}
+
+
+.card-height {
+    padding-bottom: 10%;
+    padding-top: 10%;
+    margin-top: 27px;
+}
+
+.font-bold {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 31px;
+}
+
+.res-burger-p{
+    padding-left: 61px;
+}
+    
+    
+    
+    }
+
+

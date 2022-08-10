@@ -30,3 +30,69 @@
     right: 18%;
     margin-right: 80px;
 }
+
+@media only screen and (max-width:576px) {
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+.rotate-pricing {
+    width: 146px;
+    height: 219px;
+    background-color: rgb(255 166 0 / 83%);
+    transform: rotate(35deg);
+    /* margin-top: 15%; */
+    top: -10%;
+    right: 41%;
+    position: absolute;
+}
+.rotate-black {
+    width: 229px;
+    height: 355px;
+    background-color: rgb(255 166 0 / 83%);
+    transform: rotate(47deg);
+    position: absolute;
+    top: 46%;
+    right: 0%;
+    margin-right: 78px;
+}
+.res-dolar{
+    
+    padding-left: 46px;
+}
+.res-free{
+    padding-left: 46px;
+}
+
+
+
+
+}
+   
+
+
+
+
+
+
+
+ /* .rotate-pricing {
+        width: 118px;
+        height: 162px;
+        background-color: rgb(255 166 0 / 83%);
+        transform: rotate(18deg);
+        top: -12%;
+        right: 54%;
+        position: absolute;
+    } */
+    /* .rotate-black {
+        width: 200px;
+        height: 309px;
+        background-color: rgb(255 166 0 / 83%);
+        transform: rotate(47deg);
+        position: absolute;
+        top: 32%;
+        right: -24%;
+        margin-right: 80px;
+    } */

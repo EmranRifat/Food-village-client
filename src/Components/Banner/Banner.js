@@ -109,12 +109,12 @@ const Banner = () => {
 {/* -------------------------- */}
 <div className="">
               <div className="absolute  ">
-              <img className="anh-002" src={baid} alt="" />
-                <div class="card w-72 h-28 bg-base-100 shadow-xl  arrow-card2">
+              <img className="anh-002 res-an002" src={baid} alt="" />
+                <div class="card w-72 h-28 bg-base-100 shadow-xl  arrow-card2 res-arrow-card2">
                   <div className="flex ">
                     <div id="fride01" class="card-body  pl-20 ">
                       <div>
-                        <h2 class="card-title"><small>Fride Rice</small></h2>
+                        <h2 class="card-title res-title"><small className="res-title">Fride Rice</small></h2>
                         <div class="rating rating-sm  grid justify-items-stretch  ">
                           <input
                             type="radio"
@@ -145,11 +145,11 @@ const Banner = () => {
 
 
 
-    <img src={burger} alt="food" className=" h-auto ml-20 rounded-3xl shadow-2xl img-slider" />
+    <img src={burger} alt="food" className=" h-auto ml-20 rounded-3xl shadow-2xl img-slider res-img" />
     <div>
-      <h1 class="text-5xl font-bold">Our food site makes it easy <br /> to find local foods</h1>
-      <p class="py-6">Imagine you don't need a diet provide healthy  and delicious toad for You! <br /> We provide the best food delivery services..</p>
-      <button class="btn btn-warning px-4 fw-bold  py-2  rounded-3xl text-white ">Get Started</button>
+      <h1 class="text-5xl slider-text font-bold res-h1">Our food site makes it easy <br /> to find local foods</h1>
+      <p class="py-6 res-p res-slider-p">Imagine you don't need a diet provide healthy  and delicious toad for You! <br /> We provide the best food delivery services..</p>
+      <button class="btn btn-warning px-4 fw-bold  py-2  rounded-3xl text-white res-btn">Get Started</button>
       <button class="btn btn-accent px-4 fw-bold   py-2 slider-btn2 rounded-3xl text-white">order now </button>
     </div>
   </div>
@@ -183,10 +183,10 @@ const Banner = () => {
 
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex lg:flex-row-reverse">
-    <img src={banner3} alt="foodimg" className=" ml-20 rounded-3xl shadow-2xl img-slider" />
+    <img src={banner3} alt="foodimg" className=" ml-20 rounded-3xl shadow-2xl img-slider res-img" />
     <div>
-      <h1 class="text-5xl font-bold">Our food site makes it easy <br /> to find local foods</h1>
-      <p class="py-6">Imagine you don't need a diet provide healthy  and delicious toad for You! <br /> We provide the best food delivery services..</p>
+      <h1 class="text-5xl font-bold res-h1">Our food site makes it easy <br /> to find local foods</h1>
+      <p class="py-6 res-slider-p">Imagine you don't need a diet provide healthy  and delicious toad for You! <br /> We provide the best food delivery services..</p>
       <button class="btn  btn-warning px-4  py-2 fw-bold  rounded-3xl text-white">Get Started</button>
       <button class="btn btn-accent rounded-3xl fw-bold slider-btn2  px-4 py-2 text-white">order now </button>
     </div>

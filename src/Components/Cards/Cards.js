@@ -15,15 +15,15 @@ const Cards = () => {
   return (
     <div className="bg-base-100  ">
       <div id="features" className="container content-center">
-        <h1 className=" text-center mt-5 fw-bold feature">
+        <h1 className=" text-center mt-5 fw-bold feature res-food">
           OUR POPULAR UPDATE & NEW FOOD
         </h1>
-        <p className="text-center mt-4 fw-500">
-          Explore our exclusive categories, find photographers <br /> you would
+        <p className="text-center mt-4 fw-500 res-explore">
+          Explore our exclusive categories, find photographers <br/> you would
           love to explore and hire.
         </p>
 
-        <div className="services items-center py-12">
+        <div className="services items-center py-12 res-inventory-card">
           {foods.map((card) => (
             <Card key={card._id} card={card}></Card>
           ))}

@@ -7,7 +7,7 @@ const Chefs = () => {
             <h1 className='text-center fw-bold text-4xl text-accent'>MEET OUR CHEFS</h1>
            
             <div className='chefs py-4 pl-10'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card res-chef w-96 bg-base-100 shadow-xl">
   <figure><img src="https://images.pexels.com/photos/2544829/pexels-photo-2544829.jpeg?cs=srgb&dl=pexels-rene-asmussen-2544829.jpg&fm=jpg" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
@@ -27,7 +27,7 @@ const Chefs = () => {
     </div>
   </div>
 </div>  
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card res-chef w-96 bg-base-100 shadow-xl">
   <figure><img  src="https://images.unsplash.com/photo-1578366941741-9e517759c620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
@@ -48,7 +48,7 @@ const Chefs = () => {
     </div>
   </div>
 </div>  
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card res-chef w-96 bg-base-100 shadow-xl">
   <figure><img  src="https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">

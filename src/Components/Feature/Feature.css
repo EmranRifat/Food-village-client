@@ -1,0 +1,47 @@
+@media only screen and (max-width:576px) {
+   
+    .items-center{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 50%;
+        width: 150%;
+    }
+    .res-card{
+        margin-right: 33%;
+    
+    }
+    .card-title {
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        font-weight: bold;
+        display: block;
+        margin-right: 65px;
+    }
+    
+    
+   
+    .card-body :where(p) {
+        flex-grow: 1;
+        font-size: small;
+        margin-right: 58px;
+    }
+   
+element.style {
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+    width: 100px;
+    height: auto;
+}
+  
+    
+
+
+
+
+
+
+}

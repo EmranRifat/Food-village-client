@@ -13,13 +13,13 @@ const HeroSection = () => {
 <div className='relative '>
   
 <div className="rotate-pricing rounded-3xl  "></div>
-   <div className='flex justify-center gap-4 mb-40'>
+   <div className='flex justify-center gap-4 mb-40 container '>
        
    <div class="card w-72  shadow-2xl bg-base-100 border-none ">
   <div class="card-body card-body1 text-left">
-    <h2 class=" font-bold text-3xl">Free ..!</h2>
+    <h2 class=" font-bold text-3xl res-free">Free ..!</h2>
     <p><small style={{"color":"gray"}}> 1 month for free</small></p>
-    <h1 className='text-4xl font-bold'>$0</h1>
+    <h1 className='text-4xl font-bold res-dolar'>$0</h1>
     <p><small>No actnakiin tees</small></p>
     <p><small>No hidden costs ti </small></p>
     <p><small>No review based nothing </small></p>
@@ -36,7 +36,7 @@ const HeroSection = () => {
   <div class="card-body card-body1 text-left">
     <h2 class=" text-2xl text-white">Normal ..!</h2>
     <p><small style={{"color":"gray"}}> 1 month for free</small></p>
-    <h1 className='text-4xl font-bold text-white'>$50</h1>
+    <h1 className='text-4xl font-bold text-white res-dolar'>$50</h1>
     <p><small  style={{"color":"gray"}} >No actnakiin tees</small></p>
     <p><small  style={{"color":"gray"}}>No hidden costs ti </small></p>
     <p><small  style={{"color":"gray"}}>No review based nothing </small></p>

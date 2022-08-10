@@ -33,3 +33,32 @@
     border-right: 3px solid rgba(255, 153, 0, 0.788);
     padding-right: 10px;
 }
+
+
+@media only screen and (max-width:576px) {
+
+
+.object-none{
+    object-fit: cover;
+    height: 235px;
+    width: auto;
+    right: 25px;
+    margin-top: 27%;
+}
+.container-menu{
+    width: 160px;
+    height: 278px;
+    top: 3%;
+    right: 6%;  
+    margin-top: 30%;
+}
+.font-bold {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+
+
+
+}

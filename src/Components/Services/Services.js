@@ -22,14 +22,14 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4 card-grid ">
-            <div className="card1 relative">
+            <div className="card1 res-card1 relative">
               <div className="relative ">
                 <img id="img-001" className="img1 " src={cut} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
+                <div class="card card-02 w-64 h-40 bg-base-100 shadow-xl res-card1 ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
-                        <h2 class="card-title">Sausage Pizza</h2>
+                        <h2 class="card-title00">Sausage Pizza</h2>
                         <div class="rating rating-sm  grid justify-items-stretch  ">
                           <input
                             type="radio"
@@ -68,11 +68,11 @@ const Services = () => {
                   src={fernando}
                   alt="pizza"
                 />
-                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
+                <div class="card res-card1 w-64 h-40 bg-base-100 shadow-xl res-card2">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
-                        <h2 class="card-title">Ittalian Pizza</h2>
+                        <h2 class="card-title00">Ittalian Pizza</h2>
                         <div class="rating rating-sm  grid justify-items-stretch  ">
                           <input
                             type="radio"
@@ -108,11 +108,11 @@ const Services = () => {
                 {/* <div className='rotate rounded-2xl '></div> */}
 
                 <img id="img-003" className="img1 " src={musroom} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
+                <div class="card card-02 res-card1 w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
-                        <h2 class="card-title">Mushroom Pizza</h2>
+                        <h2 class="card-title00">Mushroom Pizza</h2>
                         <div class="rating rating-sm  grid justify-items-stretch  ">
                           <input
                             type="radio"
@@ -147,11 +147,11 @@ const Services = () => {
                 {/* <div className='rotate rounded-2xl '></div> */}
 
                 <img id="img101" className="img1 " src={cut} alt="pizza" />
-                <div class="card w-64 h-40 bg-base-100 shadow-xl ">
+                <div class="card res-card1 w-64 h-40 bg-base-100 shadow-xl ">
                   <div className="flex">
                     <div class="card-body card-mini  ">
                       <div>
-                        <h2 class="card-title">Fernando Pizza</h2>
+                        <h2 class="card-title00">Fernando Pizza</h2>
                         <div class="rating rating-sm  grid justify-items-stretch  ">
                           <input
                             type="radio"
