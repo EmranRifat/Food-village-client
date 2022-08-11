@@ -27,7 +27,7 @@ const Inventory = () => {
         <div>
             <h2 className='container text-center text-primary pt-20 fw-bold'>Inventory All Products: {items.length}</h2>
        
-        <div  className='items my-12 items-center '>
+        <div  className='items my-12 items-center res-food '>
           {
             items.map(item=><InventoryItem
             item={item}

@@ -2,10 +2,19 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5px; 
-    marginLeft: 10px;
+   
     margin-top: 20px;
     justify-content: center;
 }
 .supplier{
     line-height:.2;
+}
+
+@media only screen and (max-width:576px) {
+.res-food-btn{
+    width: 138px;
+
+    margin-left: 17px;
+}
+
 }

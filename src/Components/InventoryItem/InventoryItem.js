@@ -14,7 +14,7 @@ const InventoryItem = ({item,setOrder}) => {
 
            
  <div className=' card-section py-2 '>
-        <div className="item-card ml-4" style={{ width: "16rem" }}>
+        <div className="item-card res-food-card ml-4" style={{ width: "16rem" }}>
             <img className=' card-img-top' style={{ height: "10rem" }} src={img}  alt="..." />
             <div className="card-body mt-2 "  style={{ height: "12rem" }}>
                 <h5 className=" card-title ">{name}</h5>
@@ -46,7 +46,7 @@ const InventoryItem = ({item,setOrder}) => {
                    
                 
                 }}
-                className="btn modal-button btn btn-sm  font-bold text-white bg-gradient-to-r from-accent to-primary border-none  ml-9 btn-sm"><i className="fa-solid px-1 fa-cart-plus"></i> Order Now 
+                className="btn modal-button btn btn-sm res-food-btn font-bold text-white bg-gradient-to-r from-accent to-primary border-none  ml-9 btn-sm"><i className="fa-solid px-1 fa-cart-plus"></i> Order Now 
                 </label>
 
                 </div>

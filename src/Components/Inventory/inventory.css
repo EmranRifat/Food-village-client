@@ -7,5 +7,19 @@
     margin-top: 20px; */
     justify-content: center;
     /* padding-top: 100px; */
-    
+}
+@media only screen and (max-width:576px) {
+   
+   .res-food{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 50%;
+        width: 150%;
+      
+    }
+    .res-food-card{
+        
+        margin-right: 208px;
+    }
 }
