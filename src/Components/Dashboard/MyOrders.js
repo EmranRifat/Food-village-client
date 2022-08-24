@@ -7,7 +7,7 @@ import { signOut } from "firebase/auth";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
-  
+  console.log(orders);
   var [isloading, setIsloading] = useState([]);
   const navigate = useNavigate();
 
@@ -105,6 +105,7 @@ const MyOrders = () => {
               <th>Email</th>
               <th>Token</th>
               <th>Status</th>
+              <th>Payment</th>
             </tr>
           </thead>
           <tbody>{listData}</tbody>

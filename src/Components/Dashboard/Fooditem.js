@@ -39,7 +39,7 @@ const Fooditem = () => {
                 <th>Chefs</th>
                 <th>Token</th>
                 <th>Quantity</th>
-                <th></th>
+                <th> pAyment</th>
               </tr>
             </thead>
 
